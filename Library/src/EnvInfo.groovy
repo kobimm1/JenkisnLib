@@ -1,4 +1,4 @@
-public class EnvInfo implements hudson.model.Action,java.io.Serializable {
+public class EnvInfo implements java.io.Serializable {
     private String jobName;
     private String buildNumber;
 
