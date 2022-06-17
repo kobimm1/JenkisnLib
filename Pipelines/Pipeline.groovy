@@ -24,7 +24,7 @@ pipeline {
         stage('Run maven') {
             steps {
                 container('maven') {
-                    printMessage()
+                    printMessage(env.JOB_NAME, env.BUILD_NUMBER)
                     sh 'mvn -version'
                     sh ' echo Hello World > hello.txt'
                     sh 'ls -last'
