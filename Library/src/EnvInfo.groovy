@@ -7,12 +7,10 @@ public class EnvInfo implements java.io.Serializable {
         this.buildNumber = env.BUILD_NUMBER;
     }
 
-    @Override
     public String getJobName() {
         return jobName;
     }
 
-    @Override
     public String getBuildNumber() {
         return buildNumber;
     }
