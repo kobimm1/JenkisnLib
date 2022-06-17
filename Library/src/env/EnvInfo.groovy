@@ -1,4 +1,4 @@
-package src.env
+package env
 
 public class EnvInfo implements java.io.Serializable {
     def script
