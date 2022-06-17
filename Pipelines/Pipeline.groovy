@@ -22,8 +22,8 @@ pipeline {
     }
     stages {
         stage('Run maven') {
-            printMessage
             steps {
+                printMessage
                 container('maven') {
                     sh 'mvn -version'
                     sh ' echo Hello World > hello.txt'
