@@ -36,5 +36,9 @@ pipeline {
                 }
             }
         }
+        stage('execute script') {
+            def jenkinsEnv = new EnvInfo(this)
+            printMessage(jenkinsEnv.getJobName(), jenkinsEnv.getBuildNumber())
+        }
     }
 }

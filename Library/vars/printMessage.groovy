@@ -1,4 +1,4 @@
-def call(String name, String age){
-    def envInfo = new EnvInfo()
-    echo "@@@@@ JobName= ${envInfo.getJobName()}\nBuildNumber= ${envInfo.getBuildNumber()}  @@@@@"
+def call(){
+    def envInfo = new EnvInfo(this)
+    echo "@@@@@ JobName= ${name}\nBuildNumber= ${age}  @@@@@"
 }
