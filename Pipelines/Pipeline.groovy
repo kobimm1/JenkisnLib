@@ -22,6 +22,7 @@ pipeline {
     }
     stages {
         stage('Run maven') {
+            printMessage
             steps {
                 container('maven') {
                     sh 'mvn -version'
