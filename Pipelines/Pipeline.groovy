@@ -37,7 +37,7 @@ pipeline {
             }
         }
         stage('execute script') {
-            script {
+            steps {
                 def jenkinsEnv = new EnvInfo(this)
                 printMessage(jenkinsEnv.getJobName(), jenkinsEnv.getBuildNumber())
             }

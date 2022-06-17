@@ -1,5 +1,6 @@
-package env
-class EnvInfo implements java.io.Serializable {
+package src.env
+
+public class EnvInfo implements java.io.Serializable {
     def script
 
     public EnvInfo(script) {
