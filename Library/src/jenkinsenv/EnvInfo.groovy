@@ -1,4 +1,4 @@
-package Library.src.env
+package jenkinsenv
 
 public class EnvInfo implements java.io.Serializable {
     def script
