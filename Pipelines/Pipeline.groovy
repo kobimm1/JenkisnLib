@@ -1,5 +1,4 @@
 @Library("shared-library") _
-import jenkinsenv.*
 pipeline {
     agent {
         kubernetes {
