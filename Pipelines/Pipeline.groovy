@@ -25,8 +25,10 @@ pipeline {
             steps {
                 container('maven') {
                     printMessage(env.JOB_NAME, env.BUILD_NUMBER)
-                    def jenkinsEnv = new jenkinsenv.EnvInfo(this)
-                    printMessage(jenkinsEnv.getJobName(), jenkinsEnv.getBuildNumber())
+                    script {
+                        def jenkinsEnv = new jenkinsenv.EnvInfo(this)
+                        printMessage(jenkinsEnv.getJobName(), jenkinsEnv.getBuildNumber())
+                    }
                     sh 'mvn -version'
                     sh ' echo Hello World > hello.txt'
                     sh 'ls -last'
